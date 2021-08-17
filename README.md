@@ -3,7 +3,7 @@
 This Generator CRUD with base adminLTE template, 
 
 
-# Features!
+# Features
   - GUI Generator
   - Console Log process
   - Provides various generators like Model, Controller, Migration, Route, Form Request Validation, Blade View (Form Create & Edit, Datatable), Delete with Ajax,  
@@ -37,7 +37,7 @@ This Generator CRUD with base adminLTE template,
   # Laravel 7
   # PHP 7.4.22
    ```
-# Screenshoot
+# Screenshoots
 
 ![crud1](https://user-images.githubusercontent.com/15800599/129730823-c670cb63-e2b0-423a-907f-0bf794802c76.png)
 ![crud2](https://user-images.githubusercontent.com/15800599/129730834-b6d0ede1-67e8-4846-8898-249b49c869a1.png)
