@@ -10,7 +10,7 @@ This Generator CRUD with base adminLTE template,
   - In this first version only support input type text_field, text area & upload image with Preview (with base from library Filepond).
 
 # Work in Progress
- - 
+ - Crud with Ajax, Authenticated User role, 
 
 # Requirements
    ```sh
