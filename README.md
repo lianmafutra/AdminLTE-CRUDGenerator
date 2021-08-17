@@ -21,13 +21,13 @@ This Generator CRUD with base adminLTE template,
 2.  Run Composer
 
      ```sh 
-     Composer install
+     composer install
      ```
 4. Setting `.env`
 5. Import Database
 6. 
      ```sh 
-   Php artisan serve
+   php artisan serve
      ```
 7. Login with account -> Username : `admin` , Password : `admin112277`
 
