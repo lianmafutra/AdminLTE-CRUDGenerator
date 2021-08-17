@@ -6,14 +6,31 @@ This Generator CRUD with base adminLTE template,
 # Features!
   - GUI Generator
   - Console Log process
-  - Provides various generators like Model,Controller, Migration, Route, Form Request Validation, Blade View (Form Create & Edit, Datatable), Delete with Ajax,  
+  - Provides various generators like Model, Controller, Migration, Route, Form Request Validation, Blade View (Form Create & Edit, Datatable), Delete with Ajax,  
   - In this first version only support input type text_field, text area & upload image with Preview (with base from library Filepond).
 
 # Work in Progress
  - Crud with Ajax, Authenticated User Role, Model Relationship, add more support form input type, 
 
-# How To Use ?
-- 
+# Installation 
+1.  Clone/Download this Repository 
+
+     ```sh 
+     git clone https://github.com/lianmafutra/AdminLTE-CRUDGenerator.git
+     ```
+2.  Run Composer
+
+     ```sh 
+     Composer install
+     ```
+4. Setting .env
+5. Import Database
+6. 
+     ```sh 
+   Php artisan serve
+     ```
+7. Login with account -> Username : `admin` , Password : `admin112277`
+
 
 # Requirements
    ```sh
