@@ -12,6 +12,9 @@ This Generator CRUD with base adminLTE template,
 # Work in Progress
  - Crud with Ajax, Authenticated User Role, Model Relationship, add more support form input type, 
 
+# How To Use ?
+- 
+
 # Requirements
    ```sh
   # Laravel 7
