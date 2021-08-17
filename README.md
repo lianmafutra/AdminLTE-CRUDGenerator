@@ -46,4 +46,8 @@ This Generator CRUD with base adminLTE template,
 ![crud4](https://user-images.githubusercontent.com/15800599/129731528-a03f0adc-a0b5-4857-afeb-6066d6b66f3e.png)
 ![crud5](https://user-images.githubusercontent.com/15800599/129731536-559234ca-cd59-4497-8707-7a38c5163b98.png)
 
+# License
+
+This project is licensed under the MIT License - see the  <a href="https://github.com/lianmafutra/AdminLTE-CRUDGenerator/blob/master/LICENSE">License</a> File for details
+
   
