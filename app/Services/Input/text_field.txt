@@ -1,0 +1,4 @@
+<div class="form-group">
+    <label for="example-text-input" class="col-form-label">{{ $name }}</label>
+    <input value="{{old("{{ $name }} ") }}"  placeholder="" name="{{ $name }}" type="text" id="{{ $name }}" class="input form-control">
+</div>

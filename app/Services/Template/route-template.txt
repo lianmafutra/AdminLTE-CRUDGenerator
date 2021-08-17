@@ -1,0 +1,3 @@
+{{ $route_filepond }}
+Route::resource('{{ $model_var }}', '{{ $model_name }}Controller');
+//route_key_start 

@@ -1,0 +1,7 @@
+<div class="form-group">
+    <label>{{ $model_var }}</label>
+    <textarea id="{{ $name }}" name="{{ $name }}" 
+    class="form-control" rows="3" placeholder="" 
+    style="margin-top: 0px; margin-bottom: 0px; height: 99px;">{{old("{{ $name }}")}}</textarea></div>
+
+

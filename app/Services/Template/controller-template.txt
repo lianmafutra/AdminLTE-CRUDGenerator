@@ -1,0 +1,121 @@
+<?php
+
+    namespace App\Http\Controllers;
+        
+    use Illuminate\Http\Request;
+    use Illuminate\Support\Facades\Auth;
+    use App\#MODEL_NAME#;
+    use Illuminate\Support\Facades\File;
+    use App\Http\Requests\#MODEL_NAME#StoreRequest;
+    use App\Http\Requests\#MODEL_NAME#UpdateRequest;
+    use Illuminate\Support\Facades\DB;
+    use Illuminate\Support\Facades\URL;
+       
+        
+    class #MODEL_NAME#Controller extends Controller
+    {
+        
+            public function index()
+            {
+                $#MODEL_NAME_VAR# = #MODEL_NAME#::latest();
+                
+                if (request()->ajax()) {
+                    return datatables()->of($#MODEL_NAME_VAR#)
+                        ->addIndexColumn()
+                        ->addColumn('action', function($#MODEL_NAME_VAR#){
+                            return view('admin.#MODEL_NAME_VAR#.action', compact('#MODEL_NAME_VAR#'));
+                         })
+                        ->rawColumns(["action"])
+                        ->make(true);
+                }
+              
+                return view("admin.#MODEL_NAME_VAR#.index");
+            }
+        
+            /**
+             * Show the form for creating a new resource.
+             *
+             * @return \Illuminate\Http\Response
+             */
+            public function create()
+            {
+                 return view("admin.#MODEL_NAME_VAR#.create");
+            }
+        
+            /**
+             * Store a newly created resource in storage.
+             *
+             * @param  \Illuminate\Http\Request  $request
+             * @return \Illuminate\Http\Response
+             */
+            public function store(#MODEL_NAME#StoreRequest $request)
+            {
+                 $input = $request->all();
+                $validated = $request->validated();
+                if($validated){  
+                   {{ $filepond_move }}                
+                    #MODEL_NAME#::create($input);
+                    toastr()->success('Data has been saved successfully!');
+                    return redirect()->route('#MODEL_NAME_VAR#.index')->with('success','Post created successfully.');
+                }
+             
+               
+            }
+        
+            /**
+             * Display the specified resource.
+             *
+             * @param  int  $id
+             * @return \Illuminate\Http\Response
+             */
+            public function show($id)
+            {
+                //
+            }
+        
+            /**
+             * Show the form for editing the specified resource.
+             *
+             * @param  int  $id
+             * @return \Illuminate\Http\Response
+             */
+            public function edit(#MODEL_NAME# $#MODEL_NAME_VAR#)
+            {
+                 return view("admin.#MODEL_NAME_VAR#.edit", compact('#MODEL_NAME_VAR#'));
+            }
+        
+            /**
+             * Update the specified resource in storage.
+             *
+             * @param  \Illuminate\Http\Request  $request
+             * @param  int  $id
+             * @return \Illuminate\Http\Response
+             */
+            public function update(#MODEL_NAME#UpdateRequest $request, #MODEL_NAME# $#MODEL_NAME_VAR#)
+            {
+                $#MODEL_NAME_VAR#->update($request->all());
+                toastr()->info('Data has been update successfully!');
+                return redirect()->route('#MODEL_NAME_VAR#.index')->with('success','Post update successfully.');
+            }
+        
+            /**
+             * Remove the specified resource from storage.
+             *
+             * @param  int  $id
+             * @return \Illuminate\Http\Response
+             */
+            public function destroy($id)
+            {
+               try {
+                #MODEL_NAME#::destroy($id);
+                return $this->successResponse("Success Deleted Data");
+                } catch (\Throwable $th) {
+                    return $this->errorResponse("Error Deleted Data" . $th, 400);
+                }
+            }
+
+            {{ $filepond_store }} 
+
+        }
+
+

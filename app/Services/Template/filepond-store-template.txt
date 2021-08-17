@@ -1,0 +1,35 @@
+    public function filepondUpload(Request $request){
+
+        $array=[{{ $name_array }}];
+      
+        $validator = \Validator::make($request->all(), [
+            'gambar' => 'mimes:png,jpg,jpeg',
+          
+        ]);
+        
+        if ($validator->fails())
+        {
+            return $this->errorResponse('Ektensi File tidak di izinkan', 402);
+        }
+        else{
+           
+            foreach ($array as $key => $value) {
+                if($request->has($value)){
+                    $files = $request->file($value);  
+                    $name_uniqe = uniqid().'-'.now()->timestamp.'.'.$files->getClientOriginalExtension();
+                    $files->move(public_path() . '/uploads_tmp/', $name_uniqe);
+                    return  $name_uniqe;
+                }
+               
+            }
+        }
+    }
+
+    public function filepondCancel(Request $request){
+        $filepath = public_path("/uploads_tmp/".$request->getContent());
+        
+         if (File::exists($filepath)) {
+            $delete =  File::delete(  $filepath);
+            return response()->json(  $delete);
+        }
+    }

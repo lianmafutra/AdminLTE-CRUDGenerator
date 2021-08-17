@@ -1,0 +1,9 @@
+    const pond_{{ $name }} = FilePond.create( document.querySelector('input[name="{{ $name }}"]'),{
+        storeAsFile: true,
+        files: [
+        {
+            source: '/uploads/'+{!! json_encode(${{ $model_var }}->{{ $name }}) !!},
+        },
+    ],  
+    });
+        

@@ -1,0 +1,20 @@
+
+<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+<script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>
+<script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+<script src="https://nielsboogaard.github.io/filepond-plugin-get-file/dist/filepond-plugin-get-file.js"></script>
+
+<script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"></script>
+<script src="https://unpkg.com/filepond-plugin-file-validate-size/dist/filepond-plugin-file-validate-size.js"></script>
+<script src="https://unpkg.com/filepond-plugin-file-poster/dist/filepond-plugin-file-poster.js"></script>
+<script type="text/javascript">
+
+
+  FilePond.registerPlugin(FilePondPluginImagePreview,
+      FilePondPluginFileValidateType,FilePondPluginGetFile,
+      FilePondPluginFileValidateSize,FilePondPluginFilePoster ,FilePondPluginFileEncode );
+  
+{{ $init_filepond }}
+        
+
+  </script>

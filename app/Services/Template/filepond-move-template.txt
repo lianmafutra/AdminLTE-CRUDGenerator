@@ -1,0 +1,11 @@
+$array=[{{ $name_array }}];
+                 
+                    foreach ($array as $key => $value) {
+                        if($request->has($value)){
+                                $files = $request->file($value);  
+                                $name_uniqe =  uniqid().'-'.now()->timestamp.'.'.$files->getClientOriginalExtension();
+                                $files->move('uploads', $name_uniqe);
+                                $input[$value] = $name_uniqe;
+                        }
+                }
+                
