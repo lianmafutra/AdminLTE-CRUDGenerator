@@ -23,7 +23,7 @@ This Generator CRUD with base adminLTE template,
      ```sh 
      Composer install
      ```
-4. Setting .env
+4. Setting `.env`
 5. Import Database
 6. 
      ```sh 
