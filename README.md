@@ -7,7 +7,7 @@ This Generator CRUD with base adminLTE template,
   - GUI Generator
   - Console Log process
   - Provides various generators like Model, Controller, Migration, Route, Form Request Validation, Blade View (Form Create & Edit, Datatable), Delete with Ajax,  
-  - In this first version only support input type text_field, text area & upload image with Preview (with base from library <a href=" https://pqina.nl/filepond/ ">Filepond</a> ).
+  - In this first version only support input type text_field, text area & upload image with Preview ( with base library from <a href="https://pqina.nl/filepond/">Filepond</a> )
 
 # Work in Progress
  - Crud with Ajax, Authenticated User Role, Model Relationship, add more support form input type, 
