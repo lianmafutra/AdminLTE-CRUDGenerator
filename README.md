@@ -1,6 +1,6 @@
 # AdminLTE Crud Generator 
 
-This Generator CRUD with base adminLTE template, 
+This Laravel Generator CRUD with base adminLTE template, 
 
 
 # Features
